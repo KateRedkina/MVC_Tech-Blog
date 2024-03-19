@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    {{!-- font --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Secular+One&display=swap" rel="stylesheet">
+    <meta name="description" content="Scriptly Speaking is a JavaScript focused technology blog">
+    <title>Scriptly Speaking</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <a href="/">
+            <img src="/images/logo.png" class="logo-img" alt="Scriptly Speaking">
+            </a>
+        </div>
+
+        {{!-- hamburger for mobile view --}}
+        <div class="navbar-hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-list" id="navList">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/dash" class="nav-link">Dashboard</a></li>
+            {{#if loggedIn}}
+            <li class="nav-link" id="log-out">Log Out</li>
+            <script src="/js/logout.js"></script>
+            {{else}}
+            <li><a href="/login" class="nav-link">Log In</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+
+
+    {{{ body }}}
+    
+    <script src="/js/openPost.js"></script>
+    <script src="/js/hamburger.js"></script>
+
+</body>
+
+</html>
