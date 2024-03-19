@@ -39,4 +39,4 @@ DB_PW='YOUR PASSWORD'
 [MIT License](https://opensource.org/licenses/MIT)
 
 ## Links
-* Git-Hub Repository: 
+* Git-Hub Repository: https://github.com/KateRedkina/MVC_Tech-Blog
